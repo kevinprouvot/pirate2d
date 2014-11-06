@@ -1,13 +1,16 @@
 #ifndef PHYSICS_H
 #define PHYSICS_H
 
+#include "base.h"
+
 class Physics {
   public:
-    Physics();
+    Physics(Entity *entity);
 
     ~Physics();
 
     void update();
+
 };
 
 #endif

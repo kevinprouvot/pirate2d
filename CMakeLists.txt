@@ -25,6 +25,9 @@ endif()
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 include_directories(include)
+#add external lib to our include path
+include_directories(external)
+
 
 # Look in the Lesson0 subdirectory to find its CMakeLists.txt so we can build the executable
 add_subdirectory(pirate-client)

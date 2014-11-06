@@ -1,0 +1,15 @@
+#ifndef VECTOR_H
+#define VECTOR_H
+
+template<class T>
+class Vector2 {
+  public:
+    Vector2() : x_(0), y_(0) {
+    }
+
+    Vector2(
+  private:
+    T x_, y_;
+}
+
+#endif
