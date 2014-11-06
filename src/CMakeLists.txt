@@ -1,6 +1,6 @@
 project(pirate-client)
 
-set(srcDir src)
+set(srcDir pirate-client)
 set(controllersDir ${srcDir}/controllers)
 set(factoriesDir ${srcDir}/factories)
 
@@ -17,6 +17,9 @@ set(sources
   ${srcDir}/vectors.h
 
 )
+
+include_directories(include)
+include_directories(external)
 
 add_executable(pirate-client ${sources})
 target_link_libraries(pirate-client ${SDL2_LIBRARY})
