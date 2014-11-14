@@ -11,6 +11,9 @@ class Physics {
 
     void update();
 
+  private:
+    Rectf *box_;
+
 };
 
 #endif

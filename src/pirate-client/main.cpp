@@ -4,6 +4,7 @@
 #include <string>
 #include "res_path.h"
 #include "cleanup.h"
+#include "factories/entityFactory.h"
 
 int main()
 {

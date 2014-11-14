@@ -86,6 +86,27 @@ public:
 		Set(val["x"].asInt(), val["y"].asInt(),
 			val["w"].asInt(), val["h"].asInt());
 	}
+
+	//check collision
+	bool collide(const Rect<float> &a){
+		if (a.pos.y + a.h <= pos.y)
+			return false;
+		if (a.pos.y >= pos.y + h)
+			return false;
+		if (a.pos.x + a.w <= pos.x)
+			return false;
+		if (a.pos.x >= pos.x + w)
+			return false;
+
+		return true;
+	}
+
+	bool collide(const Vector2f &p){
+		if ((p.x > pos.x && p.x < pos.x + w) && (p.y > pos.y && p.y < pos.y + h))	
+			return true;
+		return false;
+}
+
 	///Operators
     bool operator == (Rect<T> r) const {
         return (pos.x == r.pos.x && pos.y == r.pos.y 
@@ -118,12 +139,12 @@ public:
 		Rect<int> rect(pos, w, h);
 		return rect;
 	}
-    operator std::string() const {
-        std::stringstream s;
-        s << "Rect: (" << (std::string)pos 
-            << ", w: " << w << ", h: " << h << ")";
-        return s.str();
-    }
+  operator std::string() const {
+    std::stringstream s;
+    s << "Rect: (" << (std::string)pos 
+      << ", w: " << w << ", h: " << h << ")";
+    return s.str();
+  }
 
 public:
 	Vector2<T> pos;

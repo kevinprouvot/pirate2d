@@ -15,7 +15,7 @@ set(sources
   ${srcDir}/rect.h
   ${srcDir}/render.cpp
   ${srcDir}/vectors.h
-
+  ${factoriesDir}/entityFactory.h
 )
 
 include_directories(include)
