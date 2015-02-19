@@ -1,3 +1,3 @@
 Pirate 2D
 
-Work in progress.
+Created to understand CMake basis.
